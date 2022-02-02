@@ -12,4 +12,9 @@ describe('Haiku', () => {
     let myHaiku = new Haiku ("Delightful display", "Snowdrops bow their pure white heads", "To the sun's glory");
     expect(myHaiku.findSyllable()).toEqual([6, 11, 5])
   });
+
+  test('should not include the silent e in the vowel count for each line', () => {
+    let myHaiku = new Haiku ("Delightful display", "Snowdrops bow their pure white heads", "To the sun's glory");
+    expect(myHaiku.findSyllable()).toEqual([6, 10, 5])
+  });
 });

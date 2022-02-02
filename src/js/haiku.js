@@ -6,6 +6,20 @@ export default class Haiku {
   }
 
   findSyllable() {
+    // let wordArrayLine1 = this.line1.split(" ");
+    // let wordArrayLine2 = this.line2.split(" ");
+    // let wordArrayLine3 = this.line3.split(" ");
+
+    // wordArrayLine1.forEach(function(word) {
+    //   if (word.endsWith("e") === true) {
+    //     slicedWord = word.slice(0, -1);
+    //   }
+    // });
+
+
+
+
+
     let letterArrayLine1 = this.line1.split("");
     let letterArrayLine2 = this.line2.split("");
     let letterArrayLine3 = this.line3.split("");
