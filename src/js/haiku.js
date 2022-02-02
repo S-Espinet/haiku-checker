@@ -5,6 +5,6 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-  findSyllable() {
-  }
+    findSyllable() {
+    }
 }

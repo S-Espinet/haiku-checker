@@ -8,8 +8,8 @@ describe('Haiku', () => {
     expect(myHaiku.line3).toEqual("To the sun's glory");
   });
 
-  test('should correctly count vowels in a line', () => {
+  test('should correctly count vowels in each line', () => {
     let myHaiku = new Haiku ("Delightful display", "Snowdrops bow their pure white heads", "To the sun's glory");
-    expect(myHaiku.findSyllable()).toEqual(5)
+    expect(myHaiku.findSyllable()).toEqual([5, 11, 5])
   });
 });
