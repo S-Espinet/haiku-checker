@@ -5,15 +5,20 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-    removeE() { 
-        let word = this.line1
-        if (word.endsWith("e") === true) {
-          return word.slice(0, -1);
-        }
-        else {
-          return word;
-        }
-    }
+  removeE() { 
+    let wordArrayLine1 = this.line1.split(" ");
+    let noEsLine1 = [];
+    wordArrayLine1.forEach(function(word) {
+      if (word.endsWith("e") === true) {
+        noEsLine1.push(word.slice(0, -1));
+      }
+      else {
+        noEsLine1.push(word);
+      }
+    });
+    return noEsLine1;
+  }  
+
 
     //removeEs() {
     // let wordArrayLine1 = this.line1.split(" ");
