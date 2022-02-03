@@ -5,13 +5,14 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-    removeE(word) { 
-    //     if (word.endsWith("e") === true) {
-    //       return word.slice(0, -1);
-    //     }
-    //     else {
-    //       return word;
-    //     }
+    removeE() { 
+        let word = this.line1
+        if (word.endsWith("e") === true) {
+          return word.slice(0, -1);
+        }
+        else {
+          return word;
+        }
     }
 
     //removeEs() {

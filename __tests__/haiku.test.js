@@ -7,8 +7,8 @@ describe('Haiku', () => {
     expect(myHaiku.line2).toEqual("Snowdrops bow their pure white heads");
     expect(myHaiku.line3).toEqual("To the sun's glory");
   });
-  test('should not include the silent e in the vowel count for each line', () => {
-    let myHaiku = new Haiku ("Delightful", "Snowdrops", "glory");
-    expect(myHaiku.removeE()).toEqual(["Delightful", "Snowdrops", "glory"])
+  test('should not include the silent e at the end of a word', () => {
+    let myHaiku = new Haiku ("Delightful");
+    expect(myHaiku.removeE()).toEqual("Delightful")
   });
 });
