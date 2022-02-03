@@ -5,13 +5,13 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-    removeE(word) { //we're not looking at Haiku's yet - we're looking at the smallest part of a Haiku - a word, so this function will have a test for one word that doesn't end in e, that will come back unchanged, and then a test for a word that ends in e - we can write exceptions into this function later, and those exceptions will have other tests
-        if (word.endsWith("e") === true) {
-          return word.slice(0, -1);
-        }
-        else {
-          return word;
-        }
+    removeE(word) { 
+    //     if (word.endsWith("e") === true) {
+    //       return word.slice(0, -1);
+    //     }
+    //     else {
+    //       return word;
+    //     }
     }
 
     //removeEs() {
