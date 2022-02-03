@@ -6,23 +6,45 @@ export default class Haiku {
   }
 
   findSyllable() {
-    // let wordArrayLine1 = this.line1.split(" ");
-    // let wordArrayLine2 = this.line2.split(" ");
-    // let wordArrayLine3 = this.line3.split(" ");
+    let wordArrayLine1 = this.line1.split(" ");
+    let wordArrayLine2 = this.line2.split(" ");
+    let wordArrayLine3 = this.line3.split(" ");
+    let fixedWordArrayLine1 = [];
+    let fixedWordArrayLine2 = [];
+    let fixedWordArrayLine3 = [];
 
-    // wordArrayLine1.forEach(function(word) {
-    //   if (word.endsWith("e") === true) {
-    //     slicedWord = word.slice(0, -1);
-    //   }
-    // });
+    wordArrayLine1.forEach(function(word) {
+      if (word.endsWith("e") === true) {
+        fixedWordArrayLine1.push(word.slice(0, -1))
+      } else {
+        fixedWordArrayLine1.push(word)
+      }
+    });
+    wordArrayLine2.forEach(function(word) {
+      if (word.endsWith("e") === true) {
+        fixedWordArrayLine2.push(word.slice(0, -1))
+      } else {
+        fixedWordArrayLine2.push(word)
+      }
+    });
+    wordArrayLine3.forEach(function(word) {
+      if (word.endsWith("e") === true) {
+        fixedWordArrayLine3.push(word.slice(0, -1))
+      } else {
+        fixedWordArrayLine3.push(word)
+      }
+    });
+    
+    let fixedWordStringLine1 = fixedWordArrayLine1.toString();
+    console.log(fixedWordStringLine1);
+    let fixedWordStringLine2 = fixedWordArrayLine2.toString();
+    console.log(fixedWordStringLine2);
+    let fixedWordStringLine3 = fixedWordArrayLine3.toString();
+    console.log(fixedWordStringLine3);
 
-
-
-
-
-    let letterArrayLine1 = this.line1.split("");
-    let letterArrayLine2 = this.line2.split("");
-    let letterArrayLine3 = this.line3.split("");
+    let letterArrayLine1 = fixedWordStringLine1.split("");
+    let letterArrayLine2 = fixedWordStringLine2.split("");
+    let letterArrayLine3 = fixedWordStringLine3.split("");
     let vowelArrayLine1 = [];
     let vowelArrayLine2 = [];
     let vowelArrayLine3 = [];
