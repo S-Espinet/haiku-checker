@@ -5,68 +5,97 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-  findSyllable() {
-    let wordArrayLine1 = this.line1.split(" ");
-    let wordArrayLine2 = this.line2.split(" ");
-    let wordArrayLine3 = this.line3.split(" ");
-    let fixedWordArrayLine1 = [];
-    let fixedWordArrayLine2 = [];
-    let fixedWordArrayLine3 = [];
+    removeE(word) { //we're not looking at Haiku's yet - we're looking at the smallest part of a Haiku - a word, so this function will have a test for one word that doesn't end in e, that will come back unchanged, and then a test for a word that ends in e - we can write exceptions into this function later, and those exceptions will have other tests
+        if (word.endsWith("e") === true) {
+          return word.slice(0, -1);
+        }
+        else {
+          return word;
+        }
+    }
 
-    wordArrayLine1.forEach(function(word) {
-      if (word.endsWith("e") === true) {
-        fixedWordArrayLine1.push(word.slice(0, -1))
-      } else {
-        fixedWordArrayLine1.push(word)
-      }
-    });
-    wordArrayLine2.forEach(function(word) {
-      if (word.endsWith("e") === true) {
-        fixedWordArrayLine2.push(word.slice(0, -1))
-      } else {
-        fixedWordArrayLine2.push(word)
-      }
-    });
-    wordArrayLine3.forEach(function(word) {
-      if (word.endsWith("e") === true) {
-        fixedWordArrayLine3.push(word.slice(0, -1))
-      } else {
-        fixedWordArrayLine3.push(word)
-      }
-    });
+    //removeEs() {
+    // let wordArrayLine1 = this.line1.split(" ");
+    // let wordArrayLine2 = this.line2.split(" ");
+    // let wordArrayLine3 = this.line3.split(" ");
+    // let myHaiku = [wordArrayLine1, wordArrayLine2, wordArrayLine3]
+    // let outputLines = [];
+    // myHaiku.forEach(function(wordArray) {
+    //   let mappedWordArray = wordArray.map(function(word) {
+    //      removeE(word) 
+    //   });
+    //   outputLines.push(mappedWordArray);
+    // });
+
+
     
-    let fixedWordStringLine1 = fixedWordArrayLine1.toString();
-    console.log(fixedWordStringLine1);
-    let fixedWordStringLine2 = fixedWordArrayLine2.toString();
-    console.log(fixedWordStringLine2);
-    let fixedWordStringLine3 = fixedWordArrayLine3.toString();
-    console.log(fixedWordStringLine3);
-
-    let letterArrayLine1 = fixedWordStringLine1.split("");
-    let letterArrayLine2 = fixedWordStringLine2.split("");
-    let letterArrayLine3 = fixedWordStringLine3.split("");
-    let vowelArrayLine1 = [];
-    let vowelArrayLine2 = [];
-    let vowelArrayLine3 = [];
     
-    letterArrayLine1.forEach(function(letter) {
-      if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
-      vowelArrayLine1.push(letter)
-     }
-    });
+    
+    
+    
+    
+    
+    
+    
+    
+    // let fixedWordArrayLine1
+    // let fixedWordArrayLine2
+    // let fixedWordArrayLine3
 
-    letterArrayLine2.forEach(function(letter) {
-      if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
-      vowelArrayLine2.push(letter)
-     }
-    });
+    // wordArrayLine1.forEach(function(word) {
+    //   if (word.endsWith("e") === true) {
+    //     fixedWordArrayLine1.push(word.slice(0, -1))
+    //   } else {
+    //     fixedWordArrayLine1.push(word)
+    //   }
+    // });
+    // wordArrayLine2.forEach(function(word) {
+    //   if (word.endsWith("e") === true) {
+    //     fixedWordArrayLine2.push(word.slice(0, -1))
+    //   } else {
+    //     fixedWordArrayLine2.push(word)
+    //   }
+    // });
+    // wordArrayLine3.forEach(function(word) {
+    //   if (word.endsWith("e") === true) {
+    //     fixedWordArrayLine3.push(word.slice(0, -1))
+    //   } else {
+    //     fixedWordArrayLine3.push(word)
+    //   }
+    // });
+    
+    // let fixedWordStringLine1 = fixedWordArrayLine1.toString();
+    // console.log(fixedWordStringLine1);
+    // let fixedWordStringLine2 = fixedWordArrayLine2.toString();
+    // console.log(fixedWordStringLine2);
+    // let fixedWordStringLine3 = fixedWordArrayLine3.toString();
+    // console.log(fixedWordStringLine3);
 
-    letterArrayLine3.forEach(function(letter) {
-      if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
-      vowelArrayLine3.push(letter)
-     }
-    });
-    let allLinesArray = [vowelArrayLine1.length, vowelArrayLine2.length, vowelArrayLine3.length];
-    return allLinesArray;
-  }
+  //   let letterArrayLine1 = fixedWordStringLine1.split("");
+  //   let letterArrayLine2 = fixedWordStringLine2.split("");
+  //   let letterArrayLine3 = fixedWordStringLine3.split("");
+  //   let vowelArrayLine1 = [];
+  //   let vowelArrayLine2 = [];
+  //   let vowelArrayLine3 = [];
+    
+  //   letterArrayLine1.forEach(function(letter) {
+  //     if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
+  //     vowelArrayLine1.push(letter)
+  //    }
+  //   });
+
+  //   letterArrayLine2.forEach(function(letter) {
+  //     if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
+  //     vowelArrayLine2.push(letter)
+  //    }
+  //   });
+
+  //   letterArrayLine3.forEach(function(letter) {
+  //     if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" || letter === "y") {
+  //     vowelArrayLine3.push(letter)
+  //    }
+  //   });
+  //   let allLinesArray = [vowelArrayLine1.length, vowelArrayLine2.length, vowelArrayLine3.length];
+  //   return allLinesArray;
+  // }
 }
